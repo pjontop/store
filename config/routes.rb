@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
-  # get "/products", to: "products#index"
-  
-  # get "/products/new" to: "products#new"
-  # post "/products", to: "products#create"
+  resource :session
+  resources :passwords, param: :token
+    # get "/products", to: "products#index"
 
-  # get "/products/:id", to: "products#show"
+    # get "/products/new" to: "products#new"
+    # post "/products", to: "products#create"
 
-  # get "/products/:id/edit", to: "products#edit"
-  # patch "/products/:id", to: "products#uupdate"
-  # put "/products/:id", to "products#update"
+    # get "/products/:id", to: "products#show"
 
-  # delete "products/:id", to: "products#destroy"
+    # get "/products/:id/edit", to: "products#edit"
+    # patch "/products/:id", to: "products#uupdate"
+    # put "/products/:id", to "products#update"
+
+    # delete "products/:id", to: "products#destroy"
     resources :products
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
